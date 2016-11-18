@@ -359,8 +359,8 @@ public class EditorActivity extends AppCompatActivity implements
     private boolean checker() {
         if ((mNameEditText.getText().toString().trim().length() == 0) || (mcontactEditText.getText().toString().trim().length() == 0) ||
                 (mqtyEditText.getText().toString().trim().length() == 0) ||
-                (mPriceEditText.getText().toString().trim().length() == 0)) {
-            Toast.makeText(this, "Fill all blank fields!",
+                (mPriceEditText.getText().toString().trim().length() == 0)||bitmap==null) {
+            Toast.makeText(this, "Fill all blank fields! and add the image",
                     Toast.LENGTH_SHORT).show();
             return false;
         } else return true;

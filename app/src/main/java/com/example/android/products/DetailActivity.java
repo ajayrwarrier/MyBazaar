@@ -20,6 +20,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.android.products.data.ProductContract;
+
+import static android.R.attr.id;
 import static com.example.android.products.data.ProductProvider.LOG_TAG;
 
 public class DetailActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
@@ -109,7 +111,10 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
             return;
         }
 
+
         if (cursor.moveToFirst()) {
+            int idIndex = cursor.getColumnIndex(ProductContract.ProductEntry._ID);
+            int id = cursor.getInt(idIndex);
             int nameColumnIndex = cursor.getColumnIndex(ProductContract.ProductEntry.COLUMN_PRODUCT_NAME);
             int contactColumnIndex = cursor.getColumnIndex(ProductContract.ProductEntry.COLUMN_PRODUCT_CONTACT);
             int qtyColumnIndex = cursor.getColumnIndex(ProductContract.ProductEntry.COLUMN_PRODUCT_QUANTITY);
@@ -120,6 +125,7 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
             String contact = cursor.getString(contactColumnIndex);
             String image = cursor.getString(imageColumnIndex);
             int qty = cursor.getInt(qtyColumnIndex);
+
             int price = cursor.getInt(priceColumnIndex);
             int sales = cursor.getInt(salesColumnIndex);
             Log.d(LOG_TAG, name);
