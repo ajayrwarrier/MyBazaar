@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    android:layout_margin="20dp"
+    android:descendantFocusability="blocksDescendants"
+    android:elevation="10dp">
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_gravity="center"
+        android:text="@string/price"
+        android:textSize="20sp"
+        android:layout_width="59dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/green"
+        android:layout_below="@+id/name"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name" />
+
+    <TextView
+        android:text="@string/in_stock"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/qty"
+        android:layout_below="@+id/price"
+        android:layout_alignLeft="@+id/price"
+        android:layout_alignStart="@+id/price" />
+
+    <TextView
+        android:text="@string/sales"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sales"
+        android:layout_below="@+id/qty"
+        android:layout_alignLeft="@+id/qty"
+        android:layout_alignStart="@+id/qty" />
+
+    <TextView
+        android:id="@+id/name"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:text="@string/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="#2B3D4D"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/buy"
+        android:background="@color/green"
+        android:id="@+id/salesButton"
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_alignTop="@+id/qty"
+        android:layout_marginLeft="60dp"
+        android:layout_toRightOf="@+id/sales"
+        android:elevation="24dp" />
+</RelativeLayout>

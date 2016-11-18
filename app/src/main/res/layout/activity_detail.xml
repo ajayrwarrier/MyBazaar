@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/image_view"
+        android:layout_gravity="center"
+        android:layout_height="150dp"
+  />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/PriceHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/product_nameHead"
+            android:layout_alignRight="@+id/product_nameHead"
+            android:layout_below="@+id/product_nameHead"
+            android:layout_marginTop="22dp"
+            android:text="@string/price"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/StockHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/PriceHead"
+            android:layout_alignRight="@+id/PriceHead"
+            android:layout_below="@+id/PriceHead"
+            android:layout_marginTop="32dp"
+            android:text="@string/in_stock"
+            tools:text="@string/in_stock"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="100dp"
+            android:textAlignment="viewEnd"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/product_nameHead"
+            android:layout_marginLeft="40dp"
+            android:layout_toEndOf="@+id/product_nameHead"
+            android:layout_toRightOf="@+id/product_nameHead"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/StockHead"
+            android:layout_alignEnd="@+id/name"
+            android:layout_alignRight="@+id/name"
+            android:text="price_val" />
+
+        <TextView
+            android:id="@+id/sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/stock"
+            android:layout_alignStart="@+id/stock"
+            android:layout_alignTop="@+id/soldHead"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/order" />
+
+        <TextView
+            android:id="@+id/stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/StockHead"
+            android:layout_alignBottom="@+id/StockHead"
+            android:layout_alignLeft="@+id/price"
+            android:layout_alignStart="@+id/price"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/contactHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/StockHead"
+            android:layout_alignStart="@+id/StockHead"
+            android:layout_below="@+id/soldHead"
+            android:layout_marginTop="22dp"
+            android:text="@string/seller_info"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/product_nameHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/order"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/order"
+            android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/product_name"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/edit"
+            android:layout_alignBottom="@+id/edit"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@id/edit"
+            android:text="@string/Delete" />
+
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/order"
+            android:layout_alignBottom="@+id/order"
+            android:text="@string/edit"
+            android:layout_marginLeft="30dp"
+            android:layout_toEndOf="@+id/order"/>
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:text="@string/contact"
+            android:layout_alignBaseline="@+id/contactHead"
+            android:layout_alignBottom="@+id/contactHead"
+            android:layout_alignLeft="@+id/name"
+            android:layout_alignStart="@+id/name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/soldHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/sold"
+            tools:text="@string/sales"
+            android:layout_below="@+id/StockHead"
+            android:layout_alignRight="@+id/StockHead"
+            android:layout_alignEnd="@+id/StockHead"
+            android:textStyle="normal|bold" />
+    </RelativeLayout>
+</LinearLayout>
